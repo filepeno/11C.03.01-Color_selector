@@ -2,25 +2,36 @@
 
 document.addEventListener("DOMContentLoaded", start);
 
-const colorPicker = document.querySelector("input");
+const HTML = {};
+
+// const colorPicker = document.querySelector("input");
 
 function start() {
   console.log("start()");
+  HTML.colorPicker = document.querySelector("input");
+  HTML.colorDisplay = document.querySelector(".displayedColor");
+
   trackColorPicker();
 }
 
 function trackColorPicker() {
   console.log("trackColorPicker()");
-  colorPicker.addEventListener("input", updateColor, false);
+  HTML.colorPicker.addEventListener("input", updateColor, false);
 }
 
 function updateColor() {
-  const currentColorHEX = colorPicker.value;
-  console.log(currentColorHEX);
-  getRGB(currentColorHEX);
+  const currentColorHex = HTML.colorPicker.value;
+  console.log(currentColorHex);
+  getRGB(currentColorHex);
+  displayHex(currentColorHex);
+  displayColor(currentColorHex);
 }
 
-function displayHEX() {}
+function displayHex() {}
+
+function displayColor(valueHex) {
+  HTML.colorDisplay.style.background = valueHex;
+}
 
 function getRGB(value) {
   const value1 = value.substring(1, 3);

@@ -24,6 +24,6 @@ input {
   height: 80px;
   width: 80px;
   border-radius: 40px;
-  background-color: red;
+  background: red;
   border: white 1px solid;
 }
