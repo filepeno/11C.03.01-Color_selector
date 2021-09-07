@@ -9,11 +9,21 @@ section {
   width: 100px;
   background-color: rgb(70, 70, 70);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 }
 
 input {
-  margin-top: 1rem;
+  margin: 1rem;
   width: 3rem;
   border-radius: 5%;
+}
+
+.displayedColor {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  background-color: red;
+  border: white 1px solid;
 }
