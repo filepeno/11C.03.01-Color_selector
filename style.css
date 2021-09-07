@@ -4,26 +4,40 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 0.8rem;
+}
+
 section {
-  height: 200px;
-  width: 100px;
+  height: 250px;
+  width: 150px;
   background-color: rgb(70, 70, 70);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   margin: 1rem;
+  padding: 1rem;
 }
 
-input {
-  margin: 1rem;
-  width: 3rem;
-  border-radius: 5%;
+#colorPicker {
+  display: flex;
+  align-items: flex-start;
 }
 
 .displayedColor {
   height: 80px;
   width: 80px;
   border-radius: 40px;
-  background: red;
+  background: none;
   border: white 1px solid;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  list-style: none;
 }

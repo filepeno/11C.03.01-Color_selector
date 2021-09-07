@@ -3,6 +3,11 @@
 document.addEventListener("DOMContentLoaded", start);
 
 const HTML = {};
+// const RGB = {
+//   R: "",
+//   G: "",
+//   B: "",
+// };
 
 // const colorPicker = document.querySelector("input");
 
@@ -10,7 +15,12 @@ function start() {
   console.log("start()");
   HTML.colorPicker = document.querySelector("input");
   HTML.colorDisplay = document.querySelector(".displayedColor");
-
+  HTML.codeHex = document.querySelector("li:first-child span");
+  HTML.codeR = document.querySelector("#r");
+  HTML.codeG = document.querySelector("#g");
+  HTML.codeB = document.querySelector("#b");
+  HTML.colorPicker.value = "#ffffff";
+  updateColor(HTML.colorPicker.value);
   trackColorPicker();
 }
 
@@ -27,7 +37,9 @@ function updateColor() {
   displayColor(currentColorHex);
 }
 
-function displayHex() {}
+function displayHex(valueHex) {
+  HTML.codeHex.textContent = valueHex;
+}
 
 function displayColor(valueHex) {
   HTML.colorDisplay.style.background = valueHex;
@@ -44,12 +56,15 @@ function calculateRGB(value1, value2, value3) {
   const r = parseInt("0x" + value1, 16);
   const g = parseInt("0x" + value2, 16);
   const b = parseInt("0x" + value2, 16);
-  console.log(r, g, b);
   displayRGB(r, g, b);
   calculateHSL(r, g, b);
 }
 
-function displayRGB(r, g, b) {}
+function displayRGB(r, g, b) {
+  HTML.codeR.textContent = r;
+  HTML.codeG.textContent = g;
+  HTML.codeB.textContent = b;
+}
 
 function calculateHSL(r, g, b) {
   r /= 255;

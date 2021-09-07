@@ -9,9 +9,16 @@
   </head>
   <body>
     <section class="bg">
-      <input type="color" />
+      <article id="colorPicker">
+        <label for="color">Select color: </label>
+        <input type="color" name="color" />
+      </article>
       <div class="displayedColor"></div>
-      <div class="codeHex"></div>
+      <ul>
+        <li>hex: <span></span></li>
+        <li>RGB: <span id="r"></span> <span id="g"></span> <span id="b"></span></li>
+        <li>HSL: <span></span></li>
+      </ul>
     </section>
     <script src="script.js"></script>
   </body>
