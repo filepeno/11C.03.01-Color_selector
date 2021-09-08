@@ -19,6 +19,9 @@ function start() {
   HTML.codeR = document.querySelector("#r");
   HTML.codeG = document.querySelector("#g");
   HTML.codeB = document.querySelector("#b");
+  HTML.codeH = document.querySelector("#h");
+  HTML.codeS = document.querySelector("#s");
+  HTML.codeL = document.querySelector("#l");
   HTML.colorPicker.value = "#ffffff";
   updateColor(HTML.colorPicker.value);
   trackColorPicker();
@@ -108,7 +111,11 @@ function roundHSL(h, s, l) {
   const roundedH = Math.round(h);
   const roundedS = Math.round(s);
   const roundedL = Math.round(l);
-  console.log(roundedH, roundedS, roundedL);
+  displayHSL(roundedH, roundedS, roundedL);
 }
 
-function displayHSL() {}
+function displayHSL(roH, roS, roL) {
+  HTML.codeH.textContent = roH;
+  HTML.codeS.textContent = roS;
+  HTML.codeL.textContent = roL;
+}
